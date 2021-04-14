@@ -18,19 +18,20 @@
                         React.createElement("p", {}, props.occupation)
                   ])
             } 
-            
-            const App = () => {
-                  return React.createElement("div",{},
-                        //React.createElement("h1",{},"React is Rendered!!")
+            class App extends React.Component {
+                  render() {
+                        return React.createElement("div",{},
                         [
                               React.createElement("h1",{},"React is Rendered!!"),
                               React.createElement(Person, {name: "Ningning1", occupation:"Developer"}),
                               React.createElement(Person, {name: "Ningning2", occupation:"actor"}),
                               React.createElement(Person, {name: "Ningning3", occupation:"aaa"})
 
-                        ]
-                  );
-            };
+                        ]);
+                  }
+            }
+
+
             ReactDOM.render(React.createElement(App),document.getElementById("root"))
       </script>
 </body>
